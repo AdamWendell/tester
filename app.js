@@ -23,3 +23,15 @@ exports.stringConvert = function(string) {
       }
     }).join('')
 }
+
+// Exercise 3
+
+exports.largestNumber = function( a, b) { return (a > b) ?  a : b;}
+
+// Exercise 4
+
+exports.spaceRemover = function(str) { return str.split(' ').join('');}
+
+// Exercise 5 
+
+exports.isOdd = function(n) { return (n % 2 !== 0) ? true : false;}
