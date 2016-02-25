@@ -5,7 +5,7 @@ exports.firstAndLastWord = function (string) {
       indexOfLast = splited.length - 1,
       arr = [];
 
-  (splited.length > 1) ? arr.push([splited[0]], [splited[indexOfLast]]) : arr.push([splited[0]], []) 
+  (splited.length > 1) ? arr.push(splited[0], splited[indexOfLast]) : arr.push(splited[0], '') 
   return arr
 }
 
@@ -35,3 +35,7 @@ exports.spaceRemover = function(str) { return str.split(' ').join('');}
 // Exercise 5 
 
 exports.isOdd = function(n) { return (n % 2 !== 0) ? true : false;}
+
+// Exercise 6
+
+exports.newFunction = function() { return 'pew peww'}

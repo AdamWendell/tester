@@ -4,30 +4,28 @@ var app = require('../app'),
 // Exercise 1
 
 describe('Find the first and last word of a sentence', function() {
-	it('should return [["katt"], ["hund"]]', function() {
+	it('should return ["katt", "hund"]', function() {
 		var output = app.firstAndLastWord('katt är ninja mot hund');
 
 		assert.isArray(output, 'Array all things!');
-		assert.isArray(output[0], 'This should be a array.');
-		assert.isArray(output[1], 'This should be a array.');
-		assert.deepEqual(output, [['katt'], ['hund']])
+		assert.deepEqual(output, ['katt', 'hund'])
 
 	});
-	it('should return [["katt"], []]', function() {
+	it('should return ["katt", ""]', function() {
 		var output = app.firstAndLastWord('katt');
 
 		assert.isArray(output, 'Array all things!');
-		assert.isArray(output[0], 'This should be a array.');
-		assert.isArray(output[1], 'This should be a array.');
-		assert.deepEqual(output, [['katt'], []]);
+		assert.deepEqual(output, ['katt', '']);
 	})	
 })
+
+// Exercise 2
 
 describe('Convert a string to lowecase and replace åäö with a and o', function() {
 	it('should return "katten ar inte nordig', function() {
 		var output = app.stringConvert('Katten är inte nördig');
 
-		assert.isString(output, "It's a string!");
+		assert.isString(output, "It's a string!")
 		assert.notInclude(output, 'å', 'Noo å should be in string');
 		assert.notInclude(output, 'ä', 'Noo ä should be in string');
 		assert.notInclude(output, 'ö', 'Noo ö should be in string');
@@ -35,12 +33,14 @@ describe('Convert a string to lowecase and replace åäö with a and o', functio
 	})
 })
 
+// Exercise 3
+
 describe('Retuns the largest number', function() {
 	it('Will return 19', function() {
 		var output = app.largestNumber(12, 19);
 
-		assert.isNumber(output, 'It is a number');
 		assert.equal(output, 19, '19 is the largest number')
+    assert.isNumber(output, 'It is a number');
 	})
 
 	it('Will return 48', function() {
@@ -53,8 +53,10 @@ describe('Retuns the largest number', function() {
 });
 
 
+// Exercise 4
+
 describe('Remove spaces from strings', function() {
-	it('Should return "Ninja tortise can not dance"', function() {
+	it('Should return "Ninjatortisecannotdance"', function() {
 		var output = app.spaceRemover('Ninja tortise can not dance')
 
 		assert.isString(output, 'Its a string');
@@ -68,6 +70,8 @@ describe('Remove spaces from strings', function() {
 		assert.equal(output, '');
 	})
 })
+
+// Exercise 5
 
 describe('Odd or even', function() {
 	it('Will return true when 11 is used', function() {
